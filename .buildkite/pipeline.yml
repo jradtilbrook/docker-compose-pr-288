@@ -1,15 +1,11 @@
 steps:
   - command: echo test artifact still uploaded > art
     label: PR version
-    artifact_paths:
-      - art
     plugins:
       - https://github.com/arturopie/docker-compose-buildkite-plugin#267-move-compose-cleanup-to-pre-artifact:
           run: app
   - command: echo test artifact still uploaded > art
     label: original version
-    artifact_paths:
-      - art
     plugins:
       - docker-compose#v3.9.0:
           run: app
