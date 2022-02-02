@@ -1,0 +1,7 @@
+version: '3'
+services:
+  app:
+    image: bash
+    working_dir: /app
+    volumes:
+      - .:/app
